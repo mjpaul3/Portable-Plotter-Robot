@@ -153,7 +153,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="notebook-entry-lab-9172024"><a class="header" href="#notebook-entry-lab-9172024">Notebook Entry Lab 9/17/2024</a></h1>
+                        <h1 id="notebook-entry-lab-week-of-9162024"><a class="header" href="#notebook-entry-lab-week-of-9162024">Notebook Entry Lab Week of 9/16/2024</a></h1>
 <h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
 <ul>
 <li>First TA meeting with dongming</li>
@@ -169,6 +169,142 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-10142024"><a class="header" href="#notebook-entry-lab-10142024">Notebook Entry Lab 10/14/2024</a></h1>
 <h2 id="objectives-2"><a class="header" href="#objectives-2">Objectives</a></h2>
 <h2 id="progress-1"><a class="header" href="#progress-1">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-10072024"><a class="header" href="#notebook-entry-lab-10072024">Notebook Entry Lab 10/07/2024</a></h1>
+<h2 id="objectives-3"><a class="header" href="#objectives-3">Objectives</a></h2>
+<h2 id="progress-2"><a class="header" href="#progress-2">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-10142024-1"><a class="header" href="#notebook-entry-lab-10142024-1">Notebook Entry Lab 10/14/2024</a></h1>
+<h2 id="objectives-4"><a class="header" href="#objectives-4">Objectives</a></h2>
+<h2 id="progress-3"><a class="header" href="#progress-3">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-10212024"><a class="header" href="#notebook-entry-lab-10212024">Notebook Entry Lab 10/21/2024</a></h1>
+<h2 id="objectives-5"><a class="header" href="#objectives-5">Objectives</a></h2>
+<h2 id="progress-4"><a class="header" href="#progress-4">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-10282024"><a class="header" href="#notebook-entry-lab-10282024">Notebook Entry Lab 10/28/2024</a></h1>
+<h2 id="objectives-6"><a class="header" href="#objectives-6">Objectives</a></h2>
+<h2 id="progress-5"><a class="header" href="#progress-5">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-110424"><a class="header" href="#notebook-entry-lab-110424">Notebook Entry Lab 11/04/24</a></h1>
+<h2 id="objectives-7"><a class="header" href="#objectives-7">Objectives</a></h2>
+<h2 id="progress-6"><a class="header" href="#progress-6">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-111124"><a class="header" href="#notebook-entry-lab-111124">Notebook Entry Lab 11/11/24</a></h1>
+<h2 id="objectives-8"><a class="header" href="#objectives-8">Objectives</a></h2>
+<h2 id="progress-7"><a class="header" href="#progress-7">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-111824"><a class="header" href="#notebook-entry-lab-111824">Notebook Entry Lab 11/18/24</a></h1>
+<h2 id="objectives-9"><a class="header" href="#objectives-9">Objectives</a></h2>
+<h2 id="progress-8"><a class="header" href="#progress-8">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-112524"><a class="header" href="#notebook-entry-lab-112524">Notebook Entry Lab 11/25/24</a></h1>
+<h2 id="objectives-10"><a class="header" href="#objectives-10">Objectives</a></h2>
+<h2 id="progress-9"><a class="header" href="#progress-9">Progress</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notebook-entry-lab-120224"><a class="header" href="#notebook-entry-lab-120224">Notebook Entry Lab 12/02/24</a></h1>
+<h2 id="objectives-11"><a class="header" href="#objectives-11">Objectives</a></h2>
+<ul>
+<li>Finish Kinematics code + PID</li>
+<li>Debug and test kinematics</li>
+<li>Finish Communication with robot to Web App at demo level</li>
+<li>Create github repo for code</li>
+</ul>
+<h2 id="progress-10"><a class="header" href="#progress-10">Progress</a></h2>
+<h4 id="1202-evening"><a class="header" href="#1202-evening"><strong>12/02 Evening</strong></a></h4>
+<ul>
+<li>
+<p><strong>Finalized Kinematics Code</strong></p>
+<ul>
+<li>Verified the mathematical model in <code>kinematics.cpp</code>.</li>
+<li>Tested conversions from linear to angular velocity using wheel parameters.</li>
+<li>Debugged issues such as incorrect wheelbase radius or wheel diameter values and resolved unit mismatches causing overflow errors in <code>wheelSpeeds</code> computation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tuned PID Controllers</strong></p>
+<ul>
+<li>Used test scenarios with motors to adjust <code>Kp</code>, <code>Ki</code>, and <code>Kd</code> values.</li>
+<li>Fixed instability caused by improper proportional (oscillation) and derivative (sluggish response) tuning.</li>
+<li>Addressed integral windup for large errors.</li>
+</ul>
+</li>
+</ul>
+<h4 id="1203-morning"><a class="header" href="#1203-morning"><strong>12/03 Morning</strong></a></h4>
+<ul>
+<li>
+<p><strong>Tested Core Functions</strong></p>
+<ul>
+<li>Unit tested functions like <code>moveForward</code>, <code>rotateRobot</code>, <code>drawCircle</code>, and <code>drawSquare</code>.</li>
+<li>Debugged timing calculation issues in <code>esp_timer_get_time()</code> that caused skipped execution or unexpected delays.</li>
+<li>Resolved alignment drift in <code>rotateRobot</code> by calibrating encoder accuracy.</li>
+</ul>
+</li>
+<li>
+<p><strong>Validated Web App Communication</strong></p>
+<ul>
+<li>Verified that the Flask app and ESP32 communicated correctly.</li>
+<li>Ensured the <code>sendIPToFlaskServer</code> function registered the ESP32 as expected.</li>
+<li>Tested the <code>/draw</code> POST endpoint to confirm proper JSON payload handling.</li>
+<li>Fixed deserialization errors in <code>web_server.cpp</code> and <code>app.py</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="1203-evening"><a class="header" href="#1203-evening"><strong>12/03 Evening</strong></a></h4>
+<ul>
+<li>
+<p><strong>Performed Integration Testing</strong></p>
+<ul>
+<li>Integrated kinematics, motor control, and PID feedback loops with drawing commands like <code>circle</code>, <code>square</code>, and <code>triangle</code>.</li>
+<li>Resolved issues with PWM values exceeding limits (<code>MOTOR_MAX_SPEED</code>) due to PID outputs.</li>
+<li>Fixed motor misbehavior caused by incorrect encoder ISR implementations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Refined Web UI</strong></p>
+<ul>
+<li>Finalized login/logout workflows in <code>app.py</code> and enforced single-user session rules.</li>
+</ul>
+</li>
+</ul>
+<h4 id="1204-early-morning"><a class="header" href="#1204-early-morning"><strong>12/04 Early Morning</strong></a></h4>
+<ul>
+<li>
+<p><strong>Created GitHub Repository</strong></p>
+<ul>
+<li>Organized the repository with clear module folders:
+<ul>
+<li><code>/src</code> for C++ code (<code>motor_control</code>, <code>pid_control</code>, <code>kinematics</code>).</li>
+<li><code>/web</code> for the Flask app.</li>
+<li><code>/docs</code> for project documentation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conducted Final System Testing</strong></p>
+<ul>
+<li>Tested commands issued through the web interface, ensuring the robot drew shapes as expected.</li>
+<li>Verified communication reliability over Wi-Fi.</li>
+<li>Addressed latency issues in HTTP requests and resolved occasional connection timeouts caused by weak Wi-Fi signals.</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-notes-for-debugging"><a class="header" href="#additional-notes-for-debugging">Additional Notes for Debugging</a></h3>
+<ul>
+<li>
+<p><strong>Hardware-Specific Issues</strong></p>
+<ul>
+<li>Resolved encoder ISR bounce by implementing software debouncing.</li>
+<li>Verified motor driver wiring and ensured proper STDBY pin configuration.</li>
+</ul>
+</li>
+<li>
+<p><strong>Communication Issues</strong></p>
+<ul>
+<li>Used debug logs on the ESP32 to trace packet failures and addressed connection inconsistencies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Logging and Monitoring</strong></p>
+<ul>
+<li>Implemented verbose logging for PID values, calculated wheel speeds, and HTTP responses to streamline troubleshooting.</li>
+</ul>
+</li>
+</ul>
+<h3 id="issues"><a class="header" href="#issues">Issues:</a></h3>
+<p>Kinematics for PID on front 2 wheels is correct; Fiddling with the connections on the back motor shows that the issue lies behind the blue/white lines connecting to the encoder, meaning encoder feedback does not work correctly. We verified this on the morning of 12/04.</p>
 
                     </main>
 

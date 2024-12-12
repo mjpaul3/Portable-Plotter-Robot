@@ -1,4 +1,4 @@
-# Notebook Entry Lab 9/17/2024
+# Notebook Entry Lab Week of 9/16/2024
 
 ## Objectives
 - First TA meeting with dongming 
