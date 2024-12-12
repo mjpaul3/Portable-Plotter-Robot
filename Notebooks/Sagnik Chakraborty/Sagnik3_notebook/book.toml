@@ -1,0 +1,6 @@
+[book]
+authors = ["redflame2112"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ECE445 Lab Notebook"
