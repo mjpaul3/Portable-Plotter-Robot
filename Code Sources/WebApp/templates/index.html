@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotter Control</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Plotter Robot Control</h1>
+    <div class="button-container">
+        <button onclick="sendCommand('circle')">Draw Circle</button>
+        <button onclick="sendCommand('square')">Draw Square</button>
+        <button onclick="sendCommand('rectangle')">Draw Rectangle</button>
+        <button onclick="sendCommand('triangle')">Draw Triangle</button>
+    </div>
+    <div id="status"></div>
+    <script>
+        async function sendCommand(shape) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = "Sending command...";
+            
+            const response = await fetch('/draw', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ shape }),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                statusDiv.innerHTML = result.message;
+            } else {
+                statusDiv.innerHTML = `Error: ${result.error}`;
+            }
+        }
+    </script>
+</body>
+</html>
