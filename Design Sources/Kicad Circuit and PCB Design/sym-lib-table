@@ -1,0 +1,11 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "2024-09-29_21-46-53")(type "KiCad")(uri "${KIPRJMOD}/Imports/KiCADv6/2024-09-29_21-46-53.kicad_sym")(options "")(descr ""))
+  (lib (name "SP0503BAHTG")(type "KiCad")(uri "${KIPRJMOD}/Imports/SP0503BAHTG/2024-09-30_19-34-43.kicad_sym")(options "")(descr ""))
+  (lib (name "PJ-102AH")(type "KiCad")(uri "${KIPRJMOD}/Imports/PJ_102AH/PJ-102AH.kicad_sym")(options "")(descr ""))
+  (lib (name "2024-10-11_18-34-15")(type "KiCad")(uri "${KIPRJMOD}/Imports/TPS62A01DRLR/2024-10-11_18-34-15.kicad_sym")(options "")(descr ""))
+  (lib (name "CP2102N-A02-GQFN28")(type "KiCad")(uri "/Users/mpaul/Desktop/College/Fourth Year/S1/ECE 445/Portable Plotter Robot/Kicad/Imports/CP2102N_A02_GQFN28/CP2102N-A02-GQFN28.kicad_sym")(options "")(descr "")(disabled)(hidden))
+  (lib (name "ESP32")(type "KiCad")(uri "${KIPRJMOD}/Imports/ESP32/2024-10-20_23-00-33.kicad_sym")(options "")(descr ""))
+  (lib (name "2024-11-12_15-45-32")(type "KiCad")(uri "${KIPRJMOD}/Imports/CP2102N_A02_GQFN24R/2024-11-12_15-45-32.kicad_sym")(options "")(descr ""))
+  (lib (name "2024-11-13_01-03-28")(type "KiCad")(uri "${KIPRJMOD}/Imports/SMD button/2024-11-13_01-03-28.kicad_sym")(options "")(descr ""))
+)
