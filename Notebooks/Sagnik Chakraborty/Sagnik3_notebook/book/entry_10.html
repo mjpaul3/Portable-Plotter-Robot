@@ -30,6 +30,8 @@
 
         <!-- Custom theme stylesheets -->
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root to javascript -->
         <script>
@@ -152,9 +154,90 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="notebook-entry-lab-111824"><a class="header" href="#notebook-entry-lab-111824">Notebook Entry Lab 11/18/24</a></h1>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h3 id="notebook-entry-lab-111824"><a class="header" href="#notebook-entry-lab-111824">Notebook Entry Lab 11/18/24</a></h3>
 <h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
+<ul>
+<li>Set up a test bench on the development board for basic servo motor control code.</li>
+<li>Verify the functionality of servo motor control using PWM signals with an ESP32.</li>
+</ul>
 <h2 id="progress"><a class="header" href="#progress">Progress</a></h2>
+<p>This week, I focused on implementing and testing servo motor control using an ESP32 development board. The servo was controlled through a PWM signal configured with a 50Hz frequency and 14-bit resolution. Below are the key components of the implementation:</p>
+<hr />
+<h3 id="code-explanation"><a class="header" href="#code-explanation">Code Explanation</a></h3>
+<h4 id="1-pin-configuration"><a class="header" href="#1-pin-configuration"><strong>1. Pin Configuration</strong></a></h4>
+<p>The servo was connected to GPIO 13. Additionally, GPIOs 36, 35, and 1 were set to always output <code>HIGH</code> to stabilize auxiliary components.</p>
+<pre><code class="language-cpp">// Pin definitions
+#define SERVO_PIN 13
+#define SERVO_HIGH_1 36
+#define SERVO_HIGH_2 35
+#define GPIO_HIGH_1 1
+</code></pre>
+<h4 id="2-pwm-timer-configuration"><a class="header" href="#2-pwm-timer-configuration"><strong>2. PWM Timer Configuration</strong></a></h4>
+<p>A PWM signal with a frequency of 50Hz (20ms period) was used to control the servo motor. The timer was set to 14-bit resolution, allowing a duty cycle range of 0 to 16383.</p>
+<pre><code class="language-cpp">ledc_timer_config_t ledc_timer = {
+    .speed_mode = PWM_MODE,
+    .duty_resolution = PWM_RESOLUTION,
+    .timer_num = PWM_TIMER,
+    .freq_hz = PWM_FREQ,
+    .clk_cfg = LEDC_AUTO_CLK
+};
+esp_err_t timer_err = ledc_timer_config(&amp;ledc_timer);
+</code></pre>
+<h4 id="3-duty-cycle-calculation"><a class="header" href="#3-duty-cycle-calculation"><strong>3. Duty Cycle Calculation</strong></a></h4>
+<p>The pulse width for the servo was calculated based on the desired angle, mapped to the servo’s minimum and maximum pulse widths (544µs to 2400µs). The calculated pulse width was converted to the appropriate duty cycle for the PWM signal.</p>
+<p>Mathematically:
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Pulse Width (µs)</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9933em;vertical-align:-0.31em;"></span><span class="mord text"><span class="mord">SERVO_MIN_PULSEWIDTH</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3833em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">180</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.7em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">SERVO_MAX_PULSEWIDTH</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">SERVO_MIN_PULSEWIDTH</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Angle</span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">Duty Cycle</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">PWM Period (µs)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">Pulse Width (µs)</span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord text"><span class="mord">Max Resolution</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>For example:</p>
+<ul>
+<li>At 0°: Pulse width = 544µs, duty = 445.</li>
+<li>At 180°: Pulse width = 2400µs, duty = 1966.</li>
+</ul>
+<h4 id="4-angle-testing"><a class="header" href="#4-angle-testing"><strong>4. Angle Testing</strong></a></h4>
+<p>The <code>setServoAngle</code> function was implemented to move the servo to specified angles between 0° and 180°:</p>
+<pre><code class="language-cpp">void setServoAngle(uint8_t angle) {
+    // Convert angle to pulse width
+    uint32_t pulseWidth = SERVO_MIN_PULSEWIDTH + (((SERVO_MAX_PULSEWIDTH - SERVO_MIN_PULSEWIDTH) * angle) / 180);
+
+    // Convert pulse width to duty cycle
+    uint32_t duty = (uint32_t)((float)pulseWidth * 16383.0f / 20000.0f);
+
+    // Update duty cycle
+    ledc_set_duty(PWM_MODE, PWM_CHANNEL, duty);
+    ledc_update_duty(PWM_MODE, PWM_CHANNEL);
+}
+</code></pre>
+<p>The <code>loop</code> function tested the full range of motion by moving the servo to angles 0°, 45°, 90°, 135°, and 180°, pausing 2 seconds between each move.</p>
+<hr />
+<h3 id="observations"><a class="header" href="#observations">Observations</a></h3>
+<ul>
+<li>The servo motor successfully moved to the specified angles as expected.</li>
+<li>Duty cycle calculations matched the required pulse widths for standard servo motors, ensuring smooth operation.</li>
+<li>Minor debugging was required to correct initial configurations of the <code>SERVO_HIGH</code> pins and ensure proper timer initialization.</li>
+</ul>
+<hr />
+<h3 id="debugging-and-improvements"><a class="header" href="#debugging-and-improvements">Debugging and Improvements</a></h3>
+<ol>
+<li>
+<p><strong>Timer Configuration Errors</strong>:<br />
+Encountered a failure in <code>ledc_timer_config</code>. Resolved by ensuring correct timer frequency and clock settings.</p>
+</li>
+<li>
+<p><strong>Servo Jitter</strong>:<br />
+Observed slight jitter at certain angles, likely due to noise in the PWM signal. Planned to add capacitors for hardware noise reduction.</p>
+</li>
+<li>
+<p><strong>Angle Limitation</strong>:<br />
+Restricted the range to 0°–180° for compatibility with the servo’s specifications. Additional testing was done to ensure smooth operation at boundary values (0° and 180°).</p>
+</li>
+</ol>
+<hr />
+<h3 id="future-steps"><a class="header" href="#future-steps">Future Steps</a></h3>
+<ul>
+<li>Optimize signal stability by testing with hardware filtering.</li>
+<li>Implement feedback control using a potentiometer for precise angle measurements.</li>
+</ul>
 
                     </main>
 

@@ -4,3 +4,12 @@ language = "en"
 multilingual = false
 src = "src"
 title = "ECE445 Lab Notebook"
+
+[output.html]
+mathjax-support = true
+
+[output.html.katex]
+enable = true
+
+[preprocessor.katex]
+after = ["links"]

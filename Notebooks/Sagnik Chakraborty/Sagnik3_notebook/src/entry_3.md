@@ -1,4 +1,4 @@
-# Notebook Entry Lab 10/14/2024
+# Notebook Entry Lab 9/30/2024
 
 ## Objectives
 
