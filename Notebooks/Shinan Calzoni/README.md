@@ -121,7 +121,6 @@ Handed off parts as well as schematic and measurements in order for the machine 
 
 ##12/4/24 Final Demo Preparation
 
-Printed out necessary docs, got 
-
+One motor malfunction, printed out final docs, web app functioning but plotter illustration routines are botched due to motor hardware malfunction.
 
 
