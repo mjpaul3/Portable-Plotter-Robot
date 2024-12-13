@@ -16,6 +16,12 @@ Discussion of Design Doc as well as part recommendations. For example, criteria 
 
 Discussion of PCB design, main concern was how exactly we should approach making microcontroller connections, as well as other relevant design concerns.
 
+##10/03/24 Design Doc Finalization
+
+Produced official Block Diagram:
+
+![BlockDiagram](BlockDiagram.jpg)
+
 ##10/08/24 Design Review
 
 Recieved valuable feedback from professor and staff regarding the state of our project. For example, need power calculations to understand whether or not power source is sufficient enough.
@@ -28,7 +34,7 @@ Basic circuit schematic designed, need to do power requirement calculations and 
 
 Finalized first PCB design, recieved feedback from Dongming regarding PCB design choices. One notable point was that we should place ESP32 microcontroller with wifi module at the edge of future PCB iterations to ensure that wifi signals can be communicated accurately.
 
-# Produced the following power calculations: 
+### Produced the following power calculations: 
 
 Battery and Voltage Regulators
 
@@ -94,7 +100,7 @@ Uart Bridge (CP2102)
 - Assume 200 uA
 - P = 3.3V * .0002 = .00066 W
 
-# Total: 6.702937 W
+### Total: 6.702937 W
 
 
 ##10/21/24 Dongming Meeting 5
@@ -102,5 +108,20 @@ Uart Bridge (CP2102)
 Brief meeting regarding progress, at this point we are looking to order parts, communicate with machine shop.
 
 ##10/28/24 Dongming Meeting 6
+
+Another brief meeting, discussed parts. Particularly motor of choice, 6 V gear motor with encoder.
+
+##11/5/25 Dongming Meeting 7
+
+Discussed plans to meet with machine shop, at this point received most parts.
+
+##11/11/24 Machine Shop - Gregg Meeting
+
+Handed off parts as well as schematic and measurements in order for the machine shop to produce the chassis. Described need for pen actuator, etc.
+
+##12/4/24 Final Demo Preparation
+
+Printed out necessary docs, got 
+
 
 
