@@ -160,44 +160,379 @@
 <h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
 <ul>
 <li>First TA meeting with dongming</li>
-<li>Went over our project proposal, what to include in design review</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="notebook-entry-lab-9202024"><a class="header" href="#notebook-entry-lab-9202024">Notebook Entry Lab 9/20/2024</a></h1>
-<h2 id="objectives-1"><a class="header" href="#objectives-1">Objectives</a></h2>
-<ul>
-<li>Going to the machine shop, initial design to Gregg</li>
-<li>Understanding what kinds of motors we would need to use specifically</li>
+<li>Went over our project proposal, what to include in design review1</li>
 </ul>
 <h2 id="progress"><a class="header" href="#progress">Progress</a></h2>
+<ul>
+<li>
+<p>Discussed initial project ideas and received feedback on scope and feasibility.</p>
+</li>
+<li>
+<p>Noted requirements for the design review presentation, including subsystem specifications and tolerance analysis.</p>
+</li>
+</ul>
+<p>We also started on figuring out final design templates so that next week we can talk it over with Gregg</p>
+<p>This was the block diagram we used (courtesy of my partner mjpaul3) for discussion this week:
+<img src="image-2.png" alt="alt text" /></p>
+<h3 id="ta-meeting-917"><a class="header" href="#ta-meeting-917">TA meeting 9/17</a></h3>
+<p>During the TA meeting, the following feedback and action items were discussed for the design document:</p>
+<ol>
+<li>
+<p><strong>Design Document Feedback:</strong></p>
+<ul>
+<li>Clearly labeled the <strong>problem</strong> and <strong>solution</strong> sections for better clarity.</li>
+<li>Added <strong>visual aids</strong> and ensured the overall design was presented at a <strong>high level</strong>.</li>
+<li>Updated the <strong>block diagram</strong>:
+<ul>
+<li>Labeled all lines properly to indicate signal flow.</li>
+<li>Used appropriate software tools to create a clean and professional diagram.</li>
+</ul>
+</li>
+<li>Provided a <strong>subsystem overview</strong>, detailing each component's role.</li>
+<li>Outlined <strong>subsystem requirements</strong> to meet functional and performance goals.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tolerance Analysis:</strong></p>
+<ul>
+<li>Included <strong>proof of design tolerances</strong>:
+<ul>
+<li>Calculated motor torque requirements to handle the expected load.</li>
+<li>Verified the battery's capacity to ensure sufficient power for the system.</li>
+<li>Conducted directional calculations to ensure the robot's motion is within the desired limits.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ethics and Safety:</strong></p>
+<ul>
+<li>Documented potential safety concerns and proposed mitigation strategies.</li>
+<li>Compiled a reference page with citations for all sources used in the design.</li>
+</ul>
+</li>
+<li>
+<p><strong>Examples for Reference:</strong></p>
+<ul>
+<li>Used <strong>SP 2024 Team 19's TA Feedback</strong> and <strong>FA 2023 Team 3's Design Document</strong> as examples of strong documentation.</li>
+</ul>
+</li>
+</ol>
+<h4 id="next-steps"><a class="header" href="#next-steps"><strong>Next Steps</strong></a></h4>
+<ul>
+<li>Finalize updates to the block diagram and integrate them into the design document.</li>
+<li>Conduct additional testing to validate motor torque and battery capacity calculations.</li>
+<li>Prepare the design document for the next TA review session.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="notebook-entry-lab-9232024"><a class="header" href="#notebook-entry-lab-9232024">Notebook Entry Lab 9/23/2024</a></h1>
+<h2 id="objectives-1"><a class="header" href="#objectives-1">Objectives</a></h2>
+<ul>
+<li>Visit the machine shop for initial design discussions with Gregg.</li>
+<li>Determine motor requirements for the project.</li>
+</ul>
+<h2 id="progress-1"><a class="header" href="#progress-1">Progress</a></h2>
+<p>On 9/12, my partner Matt Paul (mjpaul3) decided to implement a basic 4-wheel design remniscient of the main chassis we used in ECE110
+<img src="image-1.png" alt="alt text" /></p>
+<p>On 9/16, we decided to implement this final design, which was considerably shorter compared to the initial design we found 4 days earlier, which would be considerably less expensive compared to the first design (less wheels and motors), and also lends itself to more slick motion thanks to the omniwheels.`
+<img src="image.png" alt="alt text" /></p>
+<p>On 9/24, we decided to brainstorm what we wanted to make for the design doc:</p>
+<p><img src="image-5.png" alt="alt text" /></p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-9302024"><a class="header" href="#notebook-entry-lab-9302024">Notebook Entry Lab 9/30/2024</a></h1>
 <h2 id="objectives-2"><a class="header" href="#objectives-2">Objectives</a></h2>
-<h2 id="progress-1"><a class="header" href="#progress-1">Progress</a></h2>
+<ul>
+<li>Finalize Design Document</li>
+<li>Finalize subsystem requirements and start ordering parts.</li>
+</ul>
+<h2 id="progress-2"><a class="header" href="#progress-2">Progress</a></h2>
+<ul>
+<li>Defined the high-level system architecture, including motor control, sensor integration, and Wi-Fi communication.</li>
+<li>Ordered the ESP32, motor drivers, and gear motors for testing.</li>
+<li>Created initial CAD models for mechanical design to ensure component fit.</li>
+</ul>
+<p>This was the main design we used for understanding the web app communications:
+<img src="image-3.png" alt="alt text" /></p>
+<h3 id="ta-meeting-101"><a class="header" href="#ta-meeting-101">TA meeting 10/1</a></h3>
+<ul>
+<li>Main deadline is to sign up for peer review by tomorrow (10/2)</li>
+<li>Requirements/Values not specified sufficiently yet, so we needed to fix that</li>
+<li>Our current schematic model wasn't enough, so we needed to specify more; for instance, our IO interface wasn't properly addressed and we didn't attach the correct footprint yet:
+<img src="image-4.png" alt="alt text" /></li>
+</ul>
+<p>Main todo: create slideshow for design review</p>
+<h3 id="103-schedule-fixing"><a class="header" href="#103-schedule-fixing">10/3: Schedule fixing</a></h3>
+<ul>
+<li>All we did here was fix out our schedule that we will use; this was mainly to brainstorm our workflow
+<ul>
+<li>We added details to design doc</li>
+<li>Understand software testing/debugging workflow; here I decided that we will use PID</li>
+</ul>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-10072024"><a class="header" href="#notebook-entry-lab-10072024">Notebook Entry Lab 10/07/2024</a></h1>
-<h2 id="objectives-3"><a class="header" href="#objectives-3">Objectives</a></h2>
-<h2 id="progress-2"><a class="header" href="#progress-2">Progress</a></h2>
+<h3 id="objectives-3"><a class="header" href="#objectives-3"><strong>Objectives</strong></a></h3>
+<ul>
+<li>Begin PCB design calculations for PCB review.</li>
+<li>Perform power analytics calculations to ensure all subsystems are properly powered.</li>
+</ul>
+<h3 id="progress-3"><a class="header" href="#progress-3"><strong>Progress</strong></a></h3>
+<h4 id="1011-meeting"><a class="header" href="#1011-meeting">10/11 meeting:</a></h4>
+<ol>
+<li>
+<p><strong>PCB Design Calculations</strong>:</p>
+<ul>
+<li>Reviewed the application circuit for the <strong>TPS62140DCLR</strong> voltage regulator.</li>
+<li>Calculated resistor divider values (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>) to achieve an output voltage (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">out</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>) of 3.3V.
+<ul>
+<li>Used the formula:
+<span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">out</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1.2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span></span></span></span></span>
+Result:
+<ul>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span></li>
+<li><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">450</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Verified that the selected capacitor values meet the TPS62140DCLR's application guidelines.</li>
+</ul>
+</li>
+<li>
+<p><strong>Power Subsystem Analysis</strong>:</p>
+<ul>
+<li>Measured current requirements for each subsystem:
+<ul>
+<li><strong>ESP32</strong>: 300mA.</li>
+<li><strong>Plotter Car Control Subsystem</strong>: 500mA.</li>
+<li><strong>Motor Subsystem</strong>: Calculated based on servo and DC motor driver requirements.</li>
+</ul>
+</li>
+<li>Ensured the battery and voltage regulator could supply sufficient current for all subsystems under peak load conditions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Updated Block Diagram</strong>:</p>
+<ul>
+<li>Created a detailed block diagram to map the power flow and subsystem interconnections.</li>
+<li>Incorporated feedback from previous TA meetings to ensure all connections were labeled clearly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Component Placement Considerations</strong>:</p>
+<ul>
+<li>Added a <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> optional capacitor to reduce noise in the power line.</li>
+<li>Verified placement for efficient routing of power and signal lines, especially for the ESP32 and motor drivers.</li>
+</ul>
+</li>
+</ol>
+<h3 id="next-steps-1"><a class="header" href="#next-steps-1"><strong>Next Steps</strong></a></h3>
+<ul>
+<li>Finalize the PCB layout for review, focusing on minimizing noise and ensuring reliable connections.</li>
+<li>Simulate the power system under various loads to confirm voltage stability.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-10142024"><a class="header" href="#notebook-entry-lab-10142024">Notebook Entry Lab 10/14/2024</a></h1>
 <h2 id="objectives-4"><a class="header" href="#objectives-4">Objectives</a></h2>
-<h2 id="progress-3"><a class="header" href="#progress-3">Progress</a></h2>
+<ul>
+<li>Order parts, get PCB design finalized</li>
+</ul>
+<h2 id="progress-4"><a class="header" href="#progress-4">Progress</a></h2>
+<h4 id="1015-ta-meeting"><a class="header" href="#1015-ta-meeting">10/15 TA Meeting:</a></h4>
+<ul>
+<li>We learned that multiple PCB orders are fine; we have enough time</li>
+<li>Target Round 1 hopefully</li>
+<li>Currently, we need to work on PCB</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-10212024"><a class="header" href="#notebook-entry-lab-10212024">Notebook Entry Lab 10/21/2024</a></h1>
-<h2 id="objectives-5"><a class="header" href="#objectives-5">Objectives</a></h2>
-<h2 id="progress-4"><a class="header" href="#progress-4">Progress</a></h2>
+<h3 id="objectives-5"><a class="header" href="#objectives-5"><strong>Objectives</strong></a></h3>
+<ul>
+<li>Count and finalize components for ordering, including resistors, capacitors, and inductors.</li>
+<li>Prepare the PCB design with necessary footprints for all components.</li>
+<li>Begin testing motor drivers and Raspberry Pi camera functionality.</li>
+<li>Develop and refine the ESP32 Wi-Fi interface and connections for edge-of-board placement.</li>
+</ul>
+<h3 id="progress-5"><a class="header" href="#progress-5"><strong>Progress</strong></a></h3>
+<ol>
+<li>
+<p><strong>Component Selection for PCB</strong>:</p>
+<ul>
+<li>Identified required values for resistors, capacitors, and inductors:
+<ul>
+<li>Capacitors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">4.7</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">27</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">180</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li>Resistors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">22</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">49.9</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>.</li>
+<li>Inductors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>.</li>
+</ul>
+</li>
+<li>Included electrolytic capacitors for critical filtering applications, particularly <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>PCB Preparation</strong>:</p>
+<ul>
+<li>Reviewed the placement of IO, power, ESP32, motor drivers, and sensors on the PCB layout.</li>
+<li>Noted pin configurations to optimize edge-of-board connectivity and simplify wiring during assembly.</li>
+<li>Exported necessary component footprints for use in PCB design software.</li>
+<li>From TA 10/22 meeting: PCB V1 seemed good; it's just that the PCB footprint had the ESP32 wifi antennae on board; this might cause issues</li>
+</ul>
+</li>
+<li>
+<p><strong>Motor Driver Testing</strong>:</p>
+<ul>
+<li>Began testing the motor drivers using the ESP32. Confirmed basic operation with servo motors.</li>
+<li>Encountered minor issues with pin connections, which were resolved during setup.</li>
+</ul>
+</li>
+<li>
+<p><strong>Raspberry Pi Camera Testing</strong>:</p>
+<ul>
+<li>Tested the Raspberry Pi camera for position data integration. Results were satisfactory, with clear image captures and reliable interfacing.</li>
+<li>Ensured compatibility with IMU for future position data calculations.</li>
+</ul>
+</li>
+<li>
+<p><strong>ESP32 Wi-Fi Interface</strong>:</p>
+<ul>
+<li>Started developing the ESP32 Wi-Fi interface, focusing on stability for communication with the web app.</li>
+<li>Ensured basic functionality to handle commands such as shape selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Planning for Next Week</strong>:</p>
+<ul>
+<li>Outlined steps for Week 10/27:
+<ul>
+<li>Finalize ordering of components.</li>
+<li>Develop a web board mockup.</li>
+<li>Continue testing motors and their integration with the ESP32.</li>
+<li>Work on programming ESP32 for advanced motor functions and servo tool control.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="next-steps-2"><a class="header" href="#next-steps-2"><strong>Next Steps</strong></a></h3>
+<ul>
+<li>Complete the PCB layout and simulate the power subsystem to ensure stability under load.</li>
+<li>Continue testing the motor drivers and refine motor control algorithms.</li>
+<li>Work on integrating the Raspberry Pi camera with the web app for position data feedback.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-10282024"><a class="header" href="#notebook-entry-lab-10282024">Notebook Entry Lab 10/28/2024</a></h1>
 <h2 id="objectives-6"><a class="header" href="#objectives-6">Objectives</a></h2>
-<h2 id="progress-5"><a class="header" href="#progress-5">Progress</a></h2>
+<ul>
+<li>order parts</li>
+<li>figma mockup of web board</li>
+<li>contact Gregg to get chassis done</li>
+<li>test motor</li>
+</ul>
+<h2 id="progress-6"><a class="header" href="#progress-6">Progress</a></h2>
+<ul>
+<li>We received chassis from Gregg:</li>
+</ul>
+<p><img src="image-7.png" alt="alt text" /></p>
+<h4 id="next-steps-3"><a class="header" href="#next-steps-3">Next steps:</a></h4>
+<p>Get devboard work</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-110424"><a class="header" href="#notebook-entry-lab-110424">Notebook Entry Lab 11/04/24</a></h1>
 <h2 id="objectives-7"><a class="header" href="#objectives-7">Objectives</a></h2>
-<h2 id="progress-6"><a class="header" href="#progress-6">Progress</a></h2>
+<ul>
+<li>Address feedback on PCB design.</li>
+<li>Make necessary changes to improve the PCB layout and functionality.</li>
+</ul>
+<h2 id="progress-7"><a class="header" href="#progress-7">Progress</a></h2>
+<p>The following changes were made to the PCB design based on feedback received:</p>
+<ol>
+<li>Moved the <strong>ESP32</strong> to the edge of the board to facilitate easier connections.</li>
+<li>Corrected the footprint for the <strong>6-5V power supply</strong> and <strong>UART bridge</strong>.</li>
+<li>Added <strong>power connections for the Raspberry Pi</strong>.</li>
+<li>Included <strong>test points</strong> on the PCB for debugging and monitoring.</li>
+<li>Added <strong>encoder connections</strong> for the motors to support precise feedback.</li>
+<li>Ordered additional <strong>buttons</strong> for control purposes.</li>
+<li>Exported pins for the <strong>ESP32</strong> and <strong>UART</strong> for extended connectivity.</li>
+<li>Added <strong>Raspberry Pi GPIO pins</strong> to support interfacing.</li>
+</ol>
+<p><img src="image-6.png" alt="alt text" /></p>
+<p>These changes ensure that the PCB layout supports all system components effectively and meets the design requirements.</p>
+<h2 id="next-steps-4"><a class="header" href="#next-steps-4">Next Steps</a></h2>
+<ul>
+<li>Begin testing the updated PCB with connected components.</li>
+<li>Verify the functionality of the newly added encoder connections and Raspberry Pi GPIO pins.</li>
+<li>Ensure that all exported pins are accessible and working as intended.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-111124"><a class="header" href="#notebook-entry-lab-111124">Notebook Entry Lab 11/11/24</a></h1>
 <h2 id="objectives-8"><a class="header" href="#objectives-8">Objectives</a></h2>
-<h2 id="progress-7"><a class="header" href="#progress-7">Progress</a></h2>
+<ul>
+<li>Finalize motor identification and connections for the control system.</li>
+<li>Update the parts list with the required capacitors, resistors, and inductors for PCB design.</li>
+<li>Review and refine the general layout of the robot components, including battery, Raspberry Pi, and servo placement.</li>
+</ul>
+<h2 id="progress-8"><a class="header" href="#progress-8">Progress</a></h2>
+<ol>
+<li>
+<p><strong>Motor Identification and Wiring</strong>:</p>
+<ul>
+<li>Identified motor pins and their corresponding connections:
+<ul>
+<li>OUT1, OUT2, and OUT3 mapped to motor output pins.</li>
+<li>CF1 and CF2 for current feedback.</li>
+<li>3.3V and GND for power.</li>
+</ul>
+</li>
+<li>Verified the PWM signals from the controller and reviewed the output waveform for consistency with the desired motor behavior.</li>
+</ul>
+</li>
+<li>
+<p><strong>Updated Parts List</strong>:</p>
+<ul>
+<li>Capacitors (C): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">4.7</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">21</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li>Resistors (R): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">22.1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">47.5</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">494</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">3.3</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>.</li>
+<li>Inductors (L): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>.</li>
+<li>Verified counts and confirmed all necessary components are available for assembly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Component Layout</strong>:</p>
+<ul>
+<li>Completed a detailed layout of the robot:
+<ul>
+<li>General layout includes the top and bottom placements.</li>
+<li>Raspberry Pi mounted at the top alongside the servo for camera movement.</li>
+<li>PCB and battery located at the bottom for weight distribution.</li>
+<li>Ensured all components are securely mounted with proper clearance for screws and accessibility.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>(diagrams courtesy of partner mjpaul3)</p>
+<p><img src="image-8.png" alt="alt text" /></p>
+<p><img src="image-9.png" alt="alt text" /></p>
+<ol start="4">
+<li>
+<p><strong>Design Dimensions</strong>:</p>
+<ul>
+<li>Referenced motor dimensions and wheel configurations directly from the datasheets.</li>
+<li>Integrated omniwheels and servo clearances into the layout to ensure smooth operation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Battery and Power Connections</strong>:</p>
+<ul>
+<li>Finalized the battery placement and connections.</li>
+<li>Ensured compatibility with power regulators and designed for easy accessibility during operation.</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps-5"><a class="header" href="#next-steps-5">Next Steps</a></h2>
+<ul>
+<li>Test the motor drivers and PWM control to confirm functionality with the updated connections.</li>
+<li>Begin assembling the robot with the finalized layout and components.</li>
+<li>Simulate and verify power stability across all subsystems before moving to integrated testing.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h3 id="notebook-entry-lab-111824"><a class="header" href="#notebook-entry-lab-111824">Notebook Entry Lab 11/18/24</a></h3>
 <h2 id="objectives-9"><a class="header" href="#objectives-9">Objectives</a></h2>
@@ -205,7 +540,7 @@
 <li>Set up a test bench on the development board for basic servo motor control code.</li>
 <li>Verify the functionality of servo motor control using PWM signals with an ESP32.</li>
 </ul>
-<h2 id="progress-8"><a class="header" href="#progress-8">Progress</a></h2>
+<h2 id="progress-9"><a class="header" href="#progress-9">Progress</a></h2>
 <p>This week, I focused on implementing and testing servo motor control using an ESP32 development board. The servo was controlled through a PWM signal configured with a 50Hz frequency and 14-bit resolution. Below are the key components of the implementation:</p>
 <hr />
 <h3 id="code-explanation"><a class="header" href="#code-explanation">Code Explanation</a></h3>
@@ -281,6 +616,7 @@ Restricted the range to 0°–180° for compatibility with the servo’s specifi
 <ul>
 <li>Optimize signal stability by testing with hardware filtering.</li>
 <li>Implement feedback control using a potentiometer for precise angle measurements.</li>
+<li>Adapt this code to work with PCB schematic</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h3 id="notebook-entry-lab-112524"><a class="header" href="#notebook-entry-lab-112524">Notebook Entry Lab 11/25/24</a></h3>
@@ -288,7 +624,7 @@ Restricted the range to 0°–180° for compatibility with the servo’s specifi
 <ul>
 <li>Checked and developed the mathematical model in PID.</li>
 </ul>
-<h2 id="progress-9"><a class="header" href="#progress-9">Progress</a></h2>
+<h2 id="progress-10"><a class="header" href="#progress-10">Progress</a></h2>
 <h3 id="kinematics-model"><a class="header" href="#kinematics-model">Kinematics Model</a></h3>
 <p>The mathematical model in <code>kinematics.cpp</code> was derived based on the robot's omniwheel configuration, utilizing the velocity components in the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>, and rotational (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span>) directions. The equations for the wheel linear speeds were:</p>
 <p><span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">wheelLinearSpeeds</span></span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">cos</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span></span></p>
@@ -353,6 +689,11 @@ Restricted the range to 0°–180° for compatibility with the servo’s specifi
 </li>
 </ol>
 <p>This model ensured smooth and accurate motor control, aligning with the robot's motion requirements.</p>
+<h3 id="issue"><a class="header" href="#issue">Issue</a></h3>
+<ul>
+<li>Last week's servo motor code didn't work with the PCB chip; we had to use the reduntant GPIO pins for the servo to work.</li>
+<li>We would be able to fix this issue with a PCB v3, although it is quite late</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-120224"><a class="header" href="#notebook-entry-lab-120224">Notebook Entry Lab 12/02/24</a></h1>
 <h2 id="objectives-11"><a class="header" href="#objectives-11">Objectives</a></h2>
@@ -362,7 +703,7 @@ Restricted the range to 0°–180° for compatibility with the servo’s specifi
 <li>Finish Communication with robot to Web App at demo level</li>
 <li>Create github repo for code</li>
 </ul>
-<h2 id="progress-10"><a class="header" href="#progress-10">Progress</a></h2>
+<h2 id="progress-11"><a class="header" href="#progress-11">Progress</a></h2>
 <h4 id="1202-evening"><a class="header" href="#1202-evening"><strong>12/02 Evening</strong></a></h4>
 <ul>
 <li>

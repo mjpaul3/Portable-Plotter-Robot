@@ -157,7 +157,74 @@
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-111124"><a class="header" href="#notebook-entry-lab-111124">Notebook Entry Lab 11/11/24</a></h1>
 <h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
+<ul>
+<li>Finalize motor identification and connections for the control system.</li>
+<li>Update the parts list with the required capacitors, resistors, and inductors for PCB design.</li>
+<li>Review and refine the general layout of the robot components, including battery, Raspberry Pi, and servo placement.</li>
+</ul>
 <h2 id="progress"><a class="header" href="#progress">Progress</a></h2>
+<ol>
+<li>
+<p><strong>Motor Identification and Wiring</strong>:</p>
+<ul>
+<li>Identified motor pins and their corresponding connections:
+<ul>
+<li>OUT1, OUT2, and OUT3 mapped to motor output pins.</li>
+<li>CF1 and CF2 for current feedback.</li>
+<li>3.3V and GND for power.</li>
+</ul>
+</li>
+<li>Verified the PWM signals from the controller and reviewed the output waveform for consistency with the desired motor behavior.</li>
+</ul>
+</li>
+<li>
+<p><strong>Updated Parts List</strong>:</p>
+<ul>
+<li>Capacitors (C): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">4.7</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">21</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li>Resistors (R): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">22.1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">47.5</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">494</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">3.3</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>.</li>
+<li>Inductors (L): <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>.</li>
+<li>Verified counts and confirmed all necessary components are available for assembly.</li>
+</ul>
+</li>
+<li>
+<p><strong>Component Layout</strong>:</p>
+<ul>
+<li>Completed a detailed layout of the robot:
+<ul>
+<li>General layout includes the top and bottom placements.</li>
+<li>Raspberry Pi mounted at the top alongside the servo for camera movement.</li>
+<li>PCB and battery located at the bottom for weight distribution.</li>
+<li>Ensured all components are securely mounted with proper clearance for screws and accessibility.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>(diagrams courtesy of partner mjpaul3)</p>
+<p><img src="image-8.png" alt="alt text" /></p>
+<p><img src="image-9.png" alt="alt text" /></p>
+<ol start="4">
+<li>
+<p><strong>Design Dimensions</strong>:</p>
+<ul>
+<li>Referenced motor dimensions and wheel configurations directly from the datasheets.</li>
+<li>Integrated omniwheels and servo clearances into the layout to ensure smooth operation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Battery and Power Connections</strong>:</p>
+<ul>
+<li>Finalized the battery placement and connections.</li>
+<li>Ensured compatibility with power regulators and designed for easy accessibility during operation.</li>
+</ul>
+</li>
+</ol>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<ul>
+<li>Test the motor drivers and PWM control to confirm functionality with the updated connections.</li>
+<li>Begin assembling the robot with the finalized layout and components.</li>
+<li>Simulate and verify power stability across all subsystems before moving to integrated testing.</li>
+</ul>
 
                     </main>
 

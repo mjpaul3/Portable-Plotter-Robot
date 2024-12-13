@@ -76,3 +76,8 @@ int computePID(int motor, float setpointRPM, float actualRPM) {
    - Balanced $K_d$ to prevent excessive delay in motor responses.
 
 This model ensured smooth and accurate motor control, aligning with the robot's motion requirements.
+
+
+### Issue
+- Last week's servo motor code didn't work with the PCB chip; we had to use the reduntant GPIO pins for the servo to work. 
+- We would be able to fix this issue with a PCB v3, although it is quite late

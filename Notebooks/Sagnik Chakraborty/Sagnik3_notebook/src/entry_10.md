@@ -93,4 +93,5 @@ The `loop` function tested the full range of motion by moving the servo to angle
 
 ### Future Steps
 - Optimize signal stability by testing with hardware filtering.
-- Implement feedback control using a potentiometer for precise angle measurements.
+- Implement feedback control using a potentiometer for precise angle measurements. 
+- Adapt this code to work with PCB schematic

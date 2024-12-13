@@ -11,7 +11,9 @@ If you're on MacOS or a linux based system, you can just run
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 After you have access to the `cargo` command, run 
-`cargo install mdbook` 
+`cargo install mdbook`, followed by `cargo install mdbook-katex`
+
+If you're a windows user, [install mdbook-katex with these instructions](https://github.com/lzanini/mdbook-katex)
 
 Then after cloning the repository, all you need to do is head into the folder where this 
 README file is (should be called `Sagnik3_notebook/`) and type 

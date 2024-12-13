@@ -156,8 +156,78 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="notebook-entry-lab-10212024"><a class="header" href="#notebook-entry-lab-10212024">Notebook Entry Lab 10/21/2024</a></h1>
-<h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
-<h2 id="progress"><a class="header" href="#progress">Progress</a></h2>
+<h3 id="objectives"><a class="header" href="#objectives"><strong>Objectives</strong></a></h3>
+<ul>
+<li>Count and finalize components for ordering, including resistors, capacitors, and inductors.</li>
+<li>Prepare the PCB design with necessary footprints for all components.</li>
+<li>Begin testing motor drivers and Raspberry Pi camera functionality.</li>
+<li>Develop and refine the ESP32 Wi-Fi interface and connections for edge-of-board placement.</li>
+</ul>
+<h3 id="progress"><a class="header" href="#progress"><strong>Progress</strong></a></h3>
+<ol>
+<li>
+<p><strong>Component Selection for PCB</strong>:</p>
+<ul>
+<li>Identified required values for resistors, capacitors, and inductors:
+<ul>
+<li>Capacitors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">4.7</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">27</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">180</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+<li>Resistors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">22</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">49.9</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">Ω</span></span></span></span>.</li>
+<li>Inductors: <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>.</li>
+</ul>
+</li>
+<li>Included electrolytic capacitors for critical filtering applications, particularly <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>PCB Preparation</strong>:</p>
+<ul>
+<li>Reviewed the placement of IO, power, ESP32, motor drivers, and sensors on the PCB layout.</li>
+<li>Noted pin configurations to optimize edge-of-board connectivity and simplify wiring during assembly.</li>
+<li>Exported necessary component footprints for use in PCB design software.</li>
+<li>From TA 10/22 meeting: PCB V1 seemed good; it's just that the PCB footprint had the ESP32 wifi antennae on board; this might cause issues</li>
+</ul>
+</li>
+<li>
+<p><strong>Motor Driver Testing</strong>:</p>
+<ul>
+<li>Began testing the motor drivers using the ESP32. Confirmed basic operation with servo motors.</li>
+<li>Encountered minor issues with pin connections, which were resolved during setup.</li>
+</ul>
+</li>
+<li>
+<p><strong>Raspberry Pi Camera Testing</strong>:</p>
+<ul>
+<li>Tested the Raspberry Pi camera for position data integration. Results were satisfactory, with clear image captures and reliable interfacing.</li>
+<li>Ensured compatibility with IMU for future position data calculations.</li>
+</ul>
+</li>
+<li>
+<p><strong>ESP32 Wi-Fi Interface</strong>:</p>
+<ul>
+<li>Started developing the ESP32 Wi-Fi interface, focusing on stability for communication with the web app.</li>
+<li>Ensured basic functionality to handle commands such as shape selection.</li>
+</ul>
+</li>
+<li>
+<p><strong>Planning for Next Week</strong>:</p>
+<ul>
+<li>Outlined steps for Week 10/27:
+<ul>
+<li>Finalize ordering of components.</li>
+<li>Develop a web board mockup.</li>
+<li>Continue testing motors and their integration with the ESP32.</li>
+<li>Work on programming ESP32 for advanced motor functions and servo tool control.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="next-steps"><a class="header" href="#next-steps"><strong>Next Steps</strong></a></h3>
+<ul>
+<li>Complete the PCB layout and simulate the power subsystem to ensure stability under load.</li>
+<li>Continue testing the motor drivers and refine motor control algorithms.</li>
+<li>Work on integrating the Raspberry Pi camera with the web app for position data feedback.</li>
+</ul>
 
                     </main>
 
